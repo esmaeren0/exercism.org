@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# if argument is empty (""), don't write anything
+if [ -z "$1" ]; then
+  exit 0
+fi
+# reverse string and print to screen
+echo "$1" | rev
+# -z : zero length test 
+# rev : using string reverse
+# exit 0 : finish with success 
