@@ -1,27 +1,5 @@
-this structure using for define a default value when parameter is empty or not defined.
- * basic structure
- ```bash
-# if $1 empty , using "you" 
+#!/usr/bin/env bash
+# if did not give the argument ($1 boşsa), using "you" 
 name=${1:-you}
-echo "Hello, $name!"
-
-## 3. Use Cases
-
-| Area | Description |
-|------|------------|
-| Default value assignment | Provide a safe value when a script receives optional arguments |
-| Empty or undefined variable check | Use a default value if an environment variable is missing |
-| CLI tools | Handle optional parameters in command-line scripts |
-| System administration / DevOps | Run scripts with default values if config is missing |
-| Data pipelines / ETL | Use default paths or parameters when none are provided |
-
----
-
-## 4. Similar Constructs
-
-| Construct | Meaning |
-|-----------|--------|
-| `${parameter:-default}` | Use default if the variable is empty or undefined; otherwise use the variable |
-| `${parameter:=default}` | If the variable is empty or undefined, assign it the default value |
-| `${parameter:+alt}` | If the variable is set, use `alt`; otherwise use nothing |
-| `${parameter:?error}` | If the variable is empty or undefined, display an error message |
+echo "One for $name, one for me."
+# ${parameter:-default} → "Is Zero-length or undefined variable ? if it is use default"
